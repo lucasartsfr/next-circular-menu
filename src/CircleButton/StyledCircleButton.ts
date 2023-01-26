@@ -4,31 +4,31 @@ interface Props {
   $size: number;
 }
 
-export const StyledCircleButton = <T extends "a" | "button">(tag: T) => styled(
+export const StyledCircleButton = <T extends "a" | "button" | "div">(tag: T) => styled(
   tag
 )<Props>`
-  border: 0.2rem solid #000000;
-  background: #ffffff;
+  border: var(--CMBorderColor);
+  background: var(--CMBackgroundColor);
   text-decoration: none;
-  color: #000000;
-  border-radius: 50%;
+  color: var(--CMTextColor);
+  border-radius: var(--CMRadius);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: unset;
-  padding: 0.5rem;
-  transition: all 0.5s;
+  padding: var(--CMPadding);
+  transition: var(--CMTransition);
   ${({ $size }) => `
     width: ${$size}rem;
     height: ${$size}rem;
   `}
 
   &:is(:hover, :focus, :active) {
-    color: #ffffff;
-    background: #000000;
+    color: var(--CMTexteActiveColor);
+    background: var(--CMBackgroundActiveColor);
   }
 `;
 
-export const StyledButton = StyledCircleButton("button");
+export const StyledDiv = StyledCircleButton("div");
 export const StyledLink = StyledCircleButton("a");

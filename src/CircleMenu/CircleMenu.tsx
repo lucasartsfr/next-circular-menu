@@ -41,6 +41,7 @@ export const CircleMenu: FC<Props> = ({
   const childrenCount = Children.count(props.children);
   const itemCount = rotationAngleInclusive ? childrenCount - 1 : childrenCount;
   const toggleMenu = () => {
+    console.log("Toogle Bis");
     const updatedMenuState = !menuActive;
     setMenuActive(updatedMenuState);
     onMenuToggle?.(updatedMenuState);
@@ -49,6 +50,7 @@ export const CircleMenu: FC<Props> = ({
   const menuToggle = menuToggleElement ? (
     cloneElement(menuToggleElement, {
       onClick: () => {
+        console.log("Toogle");
         menuToggleElement.props.onClick?.();
         toggleMenu();
       },

@@ -1,7 +1,7 @@
 {
-  "name": "react-circular-menu",
-  "version": "2.3.9",
-  "description": "Circle menu component for React.",
+  "name": "next-circular-menu",
+  "version": "4.1.2",
+  "description": "Circle menu component for NextJS.",
   "main": "./dist/index",
   "types": "./dist/index",
   "author": "Fawad Ali <m.fawaadali98@gmail.com>",
@@ -25,7 +25,7 @@
     "url": "https://github.com/9inpachi/react-circular-menu/issues"
   },
   "scripts": {
-    "clean": "rm -rf ./dist",
+    "clean": "IF EXIST dist (rmdir /S /Q dist)",
     "tsc": "tsc",
     "prepublishOnly": "yarn build",
     "dev": "yarn clean && tsc --watch",

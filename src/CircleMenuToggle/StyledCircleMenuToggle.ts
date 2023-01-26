@@ -5,10 +5,10 @@ export const StyledCircleMenuBurgerBar = styled.div`
   display: block;
   width: 1.2em;
   height: 0.2rem;
-  background: #000000;
+  background: var(--CMBurgerBg);
   margin-bottom: 0.3em;
-  border-radius: 1em;
-  transition: all 0.5s;
+  border-radius: var(--CMBurgerRadius);
+  transition: var(--CMTransition);
 
   &:last-child {
     margin-bottom: 0;
@@ -25,7 +25,7 @@ export const StyledCircleMenuToggle = styled(CircleButton)<Props>`
   z-index: 103;
 
   &:is(:hover, :focus, :active) > ${StyledCircleMenuBurgerBar} {
-    background: #ffffff;
+    background: var(--CMBurgerActiveBg);
   }
 
   ${({ menuActive }) =>

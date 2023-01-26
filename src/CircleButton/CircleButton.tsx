@@ -1,6 +1,6 @@
 import React, { CSSProperties, FC, MouseEvent, ReactNode } from "react";
 import { TooltipPlacement } from "../Tooltip/library/types";
-import { StyledButton, StyledLink } from "./StyledCircleButton";
+import { StyledLink, StyledDiv } from "./StyledCircleButton";
 
 export interface CircleButtonProps {
   size: number;
@@ -28,6 +28,6 @@ export const CircleButton: FC<CircleButtonProps> = (props) => {
   return link ? (
     <StyledLink {...commonProps} $size={size} href={link} target={target} />
   ) : (
-    <StyledButton {...commonProps} $size={size} onClick={onClick} />
+    <StyledDiv {...commonProps} $size={size} onClick={onClick} />
   );
 };
